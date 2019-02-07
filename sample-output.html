@@ -1,0 +1,154 @@
+<h1>Cluster</h1>
+<h2>$clustername</h2>
+
+<h3>Versions</h3>
+<p>Ambari:&nbsp;<a href=$ambari_ver>$ambari_url</a></p>
+<p>HDP: $hdp_patch_ver</p>
+<p>Hadoop: $nn_ver</p>
+<p>Spark: $spark_ver</p>
+<p>Hive: $hive_ver</p>
+
+<h3>Services</h3>
+<p>Ambari:&nbsp;<a href=$ambari_url>$ambari_url</a></p>
+<p>Name Node UI: <a href=$nn_url1">Active</a> / <a href=$nn_url2>Standby</a></p>
+<p>Resource Manager: <a href=$rm_ui1">Active</a> / <a href=$rm_ui2>Standby</a></p>
+<p>HBase Master UI: <a href=$hbase_master1>Active</a> / <a href=$hbase_master2>Standby</a></p>
+<p>Zeppelin:&nbsp;<a href=$ambari_url>$zeppelin_url</a></p>
+<p>Spark :&nbsp;<a href=$spark_hs_url>History Server UI</a></p>
+<p>Spark :&nbsp;<a href=$spark_submit_url>Spark Submit URL</a></p>
+<p>Monitoring:&nbsp;<a href=$grafana_url>Grafana UI</a></p>
+<p>Cluster Analytics:&nbsp;<a href=$smartsense_url>SmartSense Zeppelin Dashboard</a></p>
+<p>Hive JDBC:&nbsp;<a href=$hive_jdbc_url>Hive JDBC Connection URL</a></p>
+<p>Kafka:&nbsp;<a href=$kafka_zk_url>Kafka Zookeeper Quorum string</a></p>
+
+<p>Exception Ticketing:&nbsp;<a href=$JIRA_URL>JIRA Page</a></p>
+
+
+<h3>Cluster size details</h3>
+<p>Hive:&nbsp; $hive_llap_instances</p>
+<p>Hive:&nbsp; $hive_llap_daemon_size</p>
+<p>Hive:&nbsp; $hive_llap_cache_size</p>
+<p>Hive:&nbsp; $hive_llap_num_executors</p>
+
+
+<h3>Features enabled</h3>
+<p>Hive:&nbsp; $hive_flags</p>
+<p>Hive:&nbsp; $hive_tez_am_mb</p>
+<p>Hive:&nbsp; $hive_tez_task_mb</p>
+<p>Hive:&nbsp; $hive_tez_container_mb</p>
+<p>Hive:&nbsp; $hive_tez_group_max</p>
+<p>Hive:&nbsp; $hive_tez_group_min</p>
+<p>Hive:&nbsp; $hive_tez_wave_split</p>
+<p>Hive:&nbsp; $hive_tez_compress_codec</p>
+
+<p>HBase:&nbsp; $hbase_phoenix_enabled</p>
+
+<p>Hive:&nbsp; $hive_llap_enabled</p>
+<p>Yarn:&nbsp; $yarn_node_labels</p>
+<p>Yarn:&nbsp; $yarn_preemption</p>
+<p>Yarn:&nbsp; $yarn_docker_runtime</p>
+<p>Yarn:&nbsp; $yarn_cgroup_enabled</p>
+<p>Yarn:&nbsp; $yarn_gpu_enabled</p>
+
+
+<h3>Important Configurations</h3>
+<p>HDFS:&nbsp; $hdfs_datadirs</p>
+<p>HDFS:&nbsp; $hdfs_nndirs</p>
+<p>HDFS:&nbsp; $hdfs_nnheap</p>
+<p>HDFS:&nbsp; $hdfs_dnheap</p>
+<p>HDFS:&nbsp; $hdfs_faildisktolerance</p>
+<p>Yarn:&nbsp; $yarn_nm_memalloc</p>
+<p>Yarn:&nbsp; $yarn_nm_min_container_mem</p>
+<p>Yarn:&nbsp; $yarn_nm_max_container_mem</p>
+<p>Yarn:&nbsp; $yarn_nm_min_container_vcore</p>
+<p>Yarn:&nbsp; $yarn_nm_max_container_vcore</p>
+
+<p>Yarn:&nbsp; $yarn_nnheap</p>
+<p>Yarn:&nbsp; $yarn_nnheap</p>
+
+<p>Yarn:&nbsp; $yarn_mr_map_mem</p>
+<p>Yarn:&nbsp; $yarn_mr_reduce_mem</p>
+<p>Yarn:&nbsp; $yarn_mr_iosortmb</p>
+<p>Yarn:&nbsp; $yarn_mr_am_mem</p>
+
+<p>Hive:&nbsp; $hive_doas_enabled</p>
+<p>Hive:&nbsp; $hive_llap_queue</p>
+<p>Hive:&nbsp; $hive_llap_max_concurrent_queries</p>
+
+<p>Hive:&nbsp; $hive_authorization_mode</p>
+<p>Hive:&nbsp; $hive_authentication_mode</p>
+<p>Hive:&nbsp; $hive_use_ssl</p>
+
+<p>HBase:&nbsp; $hbase_master_heap</p>
+<p>HBase:&nbsp; $hbase_region_heap</p>
+<p>HBase:&nbsp; $hbase_max_hfile_size</p>
+<p>HBase:&nbsp; $hbase_phoenix_query_timeout</p>
+<p>HBase:&nbsp; $hbase_major_compaction_interval</p>
+<p>HBase:&nbsp; $hbase_max_hfile_compaction</p>
+<p>HBase:&nbsp; $hbase_rs_handler_count</p>
+<p>HBase:&nbsp; $hbase_client_max_retries</p>
+<p>HBase:&nbsp; $hbase_max_record_size</p>
+
+<p>HBase:&nbsp; $hbase_zksession_timeout</p>
+<p>HBase:&nbsp; $hbase_rpc_timeout</p>
+
+<p>HBase:&nbsp; $hbase_authorization_mode</p>
+<p>HBase:&nbsp; $hbase_authentication_mode</p>
+
+
+<p>Kafka:&nbsp; $kafka_dataDir</p>
+<p>Kafka:&nbsp; $kafka_autocreate_topics</p>
+<p>Kafka:&nbsp; $kafka_compression_type</p>
+<p>Kafka:&nbsp; $kafka_delete_topic_enable</p>
+<p>Kafka:&nbsp; $kafka_default_replication</p>
+<p>Kafka:&nbsp; $kafka_default_partition</p>
+
+<p>Ranger:&nbsp; $ranger_db_jdbc_url</p>
+<p>Ranger:&nbsp; $ranger_user_sync_enabled</p>
+<p>Ranger:&nbsp; $ranger_user_sync_source</p>
+
+<p>Ranger:&nbsp; $ranger_hdfs_plugin</p>
+<p>Ranger:&nbsp; $ranger_yarn_plugin</p>
+<p>Ranger:&nbsp; $ranger_hive_plugin</p>
+<p>Ranger:&nbsp; $ranger_hbase_plugin</p>
+<p>Ranger:&nbsp; $ranger_nifi_plugin</p>
+<p>Ranger:&nbsp; $ranger_knox_plugin</p>
+<p>Ranger:&nbsp; $ranger_kafka_plugin</p>
+<p>Ranger:&nbsp; $ranger_atlas_plugin</p>
+
+<p>Ranger:&nbsp; $ranger_audit_to_solr</p>
+<p>Ranger:&nbsp; $ranger_audit_hdfs</p>
+
+
+
+
+<p>Kafka:&nbsp; $kafka_isr_min</p>
+
+<p>Ambari Metrics:&nbsp; $ambari_metrics_operation_mode</p>
+
+<p>Zookeeper:&nbsp; $zk_snapshot_retain_count</p>
+<p>Zookeeper:&nbsp; $zk_dataDir</p>
+<p>Zookeeper:&nbsp; $zk_heap</p>
+
+<h3>Role Hosts</h3>
+<table class="wrapped"><colgroup><col /><col /><col /><col /><col /><col /><col /></colgroup>
+<tbody>
+<tr>
+<th><p><strong>Roles</strong></p></th>
+<th><p><strong>Hostname(s)</strong></p></th>
+</tr>
+<tr>
+<td>
+<p>$hostname</p></td>
+<td colspan="1">
+<table class="wrapped">
+<tbody>
+<tr>
+<td>Service Category</td>
+<td><span>$service_category</span></td></tr>
+<tr>
+<td><span>$service1</span></td>
+<td><span>$service2</span></td></tr></tbody></table>
+</td></tr>
+</table>
+
