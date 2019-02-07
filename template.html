@@ -1,0 +1,63 @@
+
+<h1>Cluster</h1>
+<h2>$clustername</h2>
+<h3>Services</h3>
+<p>Ambari:&nbsp;<a href=$ambari_url>$ambari_url</a></p>
+<p>Name Node UI: <a href=$nn_url1">Active</a> / <a href=$nn_url2>Standby</a></p>
+<p>Resource Manager: <a href=$rm_ui1">Active</a> / <a href=$rm_ui2>Standby</a></p>
+<p>HBase Master UI: <a href=$hbase_master1>Active</a> / <a href=$hbase_master2>Standby</a></p>
+<p>Zeppelin:&nbsp;<a href=$ambari_url>$zeppelin_url</a></p>
+<p>Spark :&nbsp;<a href=$spark_hs_url>History Server UI</a></p>
+<p>Monitoring:&nbsp;<a href=$grafana_url>Grafana UI</a></p>
+<p>Cluster Analytics:&nbsp;<a href=$smartsense_url>SmartSense Zeppelin Dashboard</a></p>
+
+<p>Exception Ticketing:&nbsp;<a href=$JIRA_URL>JIRA Page</a></p>
+
+<h3>Hosts</h3>
+<table class="wrapped"><colgroup><col /><col /><col /><col /><col /><col /><col /></colgroup>
+<tbody>
+<tr>
+<th>
+<p><strong>Hostname</strong></p></th>
+<th>
+<p><strong>IP Address</strong></p></th>
+<th>
+<p><strong>RAM</strong></p></th>
+<th>
+<p><strong>Disks (non-OS)</strong></p></th>
+<th>
+<p><strong>Roles</strong></p></th></tr>
+<tr>
+<td>
+<p>$hostname</p></td>
+<td>
+<p>$ip</p></td>
+<td>
+<p>$ram</p></td>
+<td>
+<p align="center">$disk_count x $disk_size HDD</p></td>
+<td colspan="1"><br /></td>
+<td colspan="1">
+<table class="wrapped">
+<tbody>
+<tr>
+<td>Service Category</td>
+<td><span>$service_category</span></td></tr>
+<tr>
+<td><span>$service1</span></td>
+<td><span>$service2</span></td></tr></tbody></table>
+</td></tr>
+
+
+<h2><br />Production topics</h2>
+<p>Trade lake currently supports the following topics in production:</p>
+<table class="wrapped"><colgroup><col /><col /></colgroup>
+<tbody>
+<tr>
+<th>topic</th>
+<th>partitions</th></tr>
+<tr>
+<td>$kafka_topic1</td>
+<td>$kafka_topic1_partition_count</td></tr>
+</tbody></table>
+<p><br /></p>
