@@ -1,0 +1,410 @@
+<html>
+<body>
+<h5><span style="color: rgb(0,112,224);">Configuration parameters</span></h5>
+<h4><span style="color: rgb(0,112,224);">Cluster Configuration</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Parameter</th><th align="left">Value</th></tr>
+<tr>
+<td colspan="0"><b>Cluster</b></td>
+</tr>
+<tr>
+<td colspan="1">Cluster version</td>
+<td colspan="1">HDP-3.0</td>
+</tr>
+<tr>
+<td colspan="0"><b>HDFS</b></td>
+</tr>
+<tr>
+<td colspan="1">Namenode URL</td>
+<td colspan="1">hdfs://nmoidu-hdp3-1:8020</td>
+</tr>
+<tr>
+<td colspan="1">Namenode Heapsize</td>
+<td colspan="1">1024m</td>
+</tr>
+<tr>
+<td colspan="1">HDFS Blocksize(MB)</td>
+<td colspan="1">128.0</td>
+</tr>
+<tr>
+<td colspan="1">Datanode HDFS Data Dir</td>
+<td colspan="1">/hadoop/hdfs/data</td>
+</tr>
+<tr>
+<td colspan="1">JournalNode Edits Dir</td>
+<td colspan="1">/hadoop/hdfs/journalnode</td>
+</tr>
+<tr>
+<td colspan="1">Namenode HDFS Data Dir</td>
+<td colspan="1">/hadoop/hdfs/namenode</td>
+</tr>
+<tr>
+<td colspan="1">HDFS Replication factor</td>
+<td colspan="1">3</td>
+</tr>
+<tr>
+<td colspan="1">Namenode Handler count</td>
+<td colspan="1">200</td>
+</tr>
+<tr>
+<td colspan="0"><b>YARN</b></td>
+</tr>
+<tr>
+<td colspan="1">MapReduce local directory</td>
+<td colspan="1">/hadoop/mapred</td>
+</tr>
+<tr>
+<td colspan="1">MapReduce jobhistory server</td>
+<td colspan="1">nmoidu-hdp3-3:10020</td>
+</tr>
+<tr>
+<td colspan="1">MapReduce Map memory</td>
+<td colspan="1">4096</td>
+</tr>
+<tr>
+<td colspan="1">MapReduce Reduce memory</td>
+<td colspan="1">8192</td>
+</tr>
+<tr>
+<td colspan="1">MapReduce AM memory</td>
+<td colspan="1">8192</td>
+</tr>
+<tr>
+<td colspan="1">MapReduce io.sort.mb</td>
+<td colspan="1">4096</td>
+</tr>
+<tr>
+<td colspan="1">YARN NodeManager Heap</td>
+<td colspan="1">1024</td>
+</tr>
+<tr>
+<td colspan="1">YARN ResourceManager Heap</td>
+<td colspan="1">1024</td>
+</tr>
+<tr>
+<td colspan="1">YARN CGroups enabled</td>
+<td colspan="1">false</td>
+</tr>
+<tr>
+<td colspan="1">YARN ATS Heap size</td>
+<td colspan="1">8072</td>
+</tr>
+<tr>
+<td colspan="1">YARN Log Aggregation enabled</td>
+<td colspan="1">true</td>
+</tr>
+<tr>
+<td colspan="1">YARN Log Server URL</td>
+<td colspan="1">http://nmoidu-hdp3-3:19888/jobhistory/logs</td>
+</tr>
+<tr>
+<td colspan="1">YARN Log Server Web Service URL</td>
+<td colspan="1">http://nmoidu-hdp3-3:8188/ws/v1/applicationhistory</td>
+</tr>
+<tr>
+<td colspan="1">YARN Nodemanager Local Dir</td>
+<td colspan="1">/hadoop/yarn/local</td>
+</tr>
+<tr>
+<td colspan="1">YARN Nodemanager Log Dir</td>
+<td colspan="1">/hadoop/yarn/log</td>
+</tr>
+<tr>
+<td colspan="1">YARN Nodemanager log retention hours</td>
+<td colspan="1">168.0</td>
+</tr>
+<tr>
+<td colspan="1">YARN NM allocated memory</td>
+<td colspan="1">12288</td>
+</tr>
+<tr>
+<td colspan="1">YARN NM allocated vcpu</td>
+<td colspan="1">6</td>
+</tr>
+<tr>
+<td colspan="1">YARN RM address</td>
+<td colspan="1">nmoidu-hdp3-1:8050</td>
+</tr>
+<tr>
+<td colspan="1">YARN RM HA enabled</td>
+<td colspan="1">false</td>
+</tr>
+<tr>
+<td colspan="1">YARN RM ZK address</td>
+<td colspan="1">nmoidu-hdp3-1:2181,nmoidu-hdp3-3:2181,node2.openstacklocal:2181</td>
+</tr>
+<tr>
+<td colspan="1">YARN RM state-store ZK path</td>
+<td colspan="1">/rmstore</td>
+</tr>
+<tr>
+<td colspan="0"><b>Kafka</b></td>
+</tr>
+<tr>
+<td colspan="1">Kafka auto create topics</td>
+<td colspan="1">true</td>
+</tr>
+<tr>
+<td colspan="1">Kafka default replication factor</td>
+<td colspan="1">1</td>
+</tr>
+<tr>
+<td colspan="1">Kafka delete topic enabled</td>
+<td colspan="1">true</td>
+</tr>
+<tr>
+<td colspan="1">Kafka Log retention hours</td>
+<td colspan="1">168</td>
+</tr>
+<tr>
+<td colspan="1">Kafka max message size</td>
+<td colspan="1">1000000</td>
+</tr>
+<tr>
+<td colspan="1">Kafka zk connect</td>
+<td colspan="1">nmoidu-hdp3-1:2181,nmoidu-hdp3-3:2181,node2.openstacklocal:2181</td>
+</tr>
+<tr>
+<td colspan="0"><b>Zookeeper</b></td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper autopurge Interval</td>
+<td colspan="1">24</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Snapshot retain count</td>
+<td colspan="1">30</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Data Dir</td>
+<td colspan="1">/hadoop/zookeeper</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Log Directory</td>
+<td colspan="1">/var/log/zookeeper</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Heap Size</td>
+<td colspan="1">1024m</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Log Max backup size</td>
+<td colspan="1">10</td>
+</tr>
+<tr>
+<td colspan="1">Zookeeper Log backup file count</td>
+<td colspan="1">10</td>
+</tr>
+<tr>
+<td colspan="0"><b>Hive</b></td>
+</tr>
+<tr>
+<td colspan="1">Hive Execution mode</td>
+<td colspan="1">llap</td>
+</tr>
+<tr>
+<td colspan="1">Hive LLAP Executor count</td>
+<td colspan="1">1</td>
+</tr>
+<tr>
+<td colspan="1">Hive LLAP Daemon Queue</td>
+<td colspan="1">default</td>
+</tr>
+<tr>
+<td colspan="1">Hive LLAP Execution mode</td>
+<td colspan="1">only</td>
+</tr>
+<tr>
+<td colspan="1">Hive Impersonation Enabled</td>
+<td colspan="1">false</td>
+</tr>
+<tr>
+<td colspan="1">Tez pre-create sessions</td>
+<td colspan="1">true</td>
+</tr>
+<tr>
+<td colspan="1">Hive Heapsize</td>
+<td colspan="1">1024</td>
+</tr>
+<tr>
+<td colspan="1">Hive ZK namespace</td>
+<td colspan="1">hiveserver2</td>
+</tr>
+<tr>
+<td colspan="1">Hive ZK quorum</td>
+<td colspan="1">nmoidu-hdp3-1:2181,nmoidu-hdp3-3:2181,node2.openstacklocal:2181</td>
+</tr>
+<tr>
+<td colspan="1">Hive metastore heapsize</td>
+<td colspan="1">1985</td>
+</tr>
+<tr>
+<td colspan="1">Hive DB name</td>
+<td colspan="1">hive</td>
+</tr>
+<tr>
+<td colspan="1">Hive DB type</td>
+<td colspan="1">mysql</td>
+</tr>
+<tr>
+<td colspan="1">Hive Security Authorization</td>
+<td colspan="1">None</td>
+</tr>
+<tr>
+<td colspan="1">Hive DB Schema name</td>
+<td colspan="1">hive</td>
+</tr>
+<tr>
+<td colspan="1">Number of LLAP nodes</td>
+<td colspan="1">1</td>
+</tr>
+<tr>
+<td colspan="1">Hive LLAP Enabled</td>
+<td colspan="1">false</td>
+</tr>
+</tr></tbody></table>
+<h5><span style="color: rgb(0,112,224);">Component Host nodes</span></h5>
+<h4><span style="color: rgb(0,112,224);">HDFS</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+<td colspan="1">DATANODE</td>
+<td colspan="1">
+nmoidu-hdp3-1
+nmoidu-hdp3-3
+node2.openstacklocal
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td colspan="1">JOURNALNODE</td>
+<td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">NAMENODE</td>
+<td colspan="1">
+nmoidu-hdp3-1
+</td>
+</tr>
+<tr>
+<td colspan="1">NFS_GATEWAY</td>
+<td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">SECONDARY_NAMENODE</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+<tr>
+<td colspan="1">ZKFC</td>
+<td colspan="1">
+</td>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">HIVE</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+</tr>
+<tr>
+<td colspan="1">HIVE_METASTORE</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+<tr>
+<td colspan="1">HIVE_SERVER</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+<tr>
+<td colspan="1">HIVE_SERVER_INTERACTIVE</td>
+<td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">MYSQL_SERVER</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">KAFKA</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+<td colspan="1">KAFKA_BROKER</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">MAPREDUCE2</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+<td colspan="1">HISTORYSERVER</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+<tr>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">TEZ</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">YARN</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+<td colspan="1">APP_TIMELINE_SERVER</td>
+<td colspan="1">
+nmoidu-hdp3-3
+</td>
+</tr>
+<tr>
+<td colspan="1">NODEMANAGER</td>
+<td colspan="1">
+nmoidu-hdp3-1
+nmoidu-hdp3-3
+node2.openstacklocal
+</td>
+</tr>
+<tr>
+<td colspan="1">RESOURCEMANAGER</td>
+<td colspan="1">
+nmoidu-hdp3-1
+</td>
+</tr>
+<tr>
+<td colspan="1">TIMELINE_READER</td>
+<td colspan="1">
+nmoidu-hdp3-1
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td colspan="1">YARN_REGISTRY_DNS</td>
+<td colspan="1">
+nmoidu-hdp3-1
+</td>
+</tr>
+</tbody></table>
+<h4><span style="color: rgb(0,112,224);">ZOOKEEPER</span></h4>
+<table class="relative-table wrapped" style="width: 99.9%;"><colgroup><col style="width: 20%;"/><col style="width: 80%;"/></colgroup><tbody><tr><th align="left">Component</th><th align="left">Host</th></tr>
+<tr>
+</tr>
+<tr>
+<td colspan="1">ZOOKEEPER_SERVER</td>
+<td colspan="1">
+nmoidu-hdp3-1
+nmoidu-hdp3-3
+node2.openstacklocal
+</td>
+</tr>
+</tbody></table>
+
+</body></html>
