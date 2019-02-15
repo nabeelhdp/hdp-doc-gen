@@ -22,7 +22,7 @@ setup(
     author=u'Nabeel Moidu',
     author_email='nmoidu@cloudera.com',
     description='Generate Confluence documentation page for HDP cluster',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     url='http://github.com/nabeelhdp/hdp-doc-gen',
     packages=find_packages(
         include=['hdp-doc-gen'],
