@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='hdp-doc-gen',
-    version='0.1',
+    version='0.1.0.dev1',
     author=u'Nabeel Moidu',
     author_email='nmoidu@cloudera.com',
     description='Generate Confluence documentation page for HDP cluster',
