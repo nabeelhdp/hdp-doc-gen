@@ -12,7 +12,7 @@ import configmapping
 
 # Print response from the Ambari server
 def send_ambari_request(url_suffix=""):
-    config_file = os.path.join(os.path.dirname(__file__), "config.ini")
+    config_file = os.path.join(os.path.dirname(__file__), "../conf/config.ini")
     ambconf = {}
     ambconf = get_config_params(config_file)
 
