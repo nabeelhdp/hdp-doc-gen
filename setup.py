@@ -16,21 +16,13 @@
 
 from setuptools import setup, find_packages
 
-long_description = ("Collects cluster configuration information,"
-                    "Component specific settings,"
-                    "host + role combinations,"
-                    "versions etc from Ambari via REST API and"
-                    "produces output in form of "
-                    "Confluence friendly HTML page."
-                    )
-
 setup(
     name='hdp-doc-gen',
     version='0.1',
     author=u'Nabeel Moidu',
     author_email='nmoidu@cloudera.com',
     description='Generate Confluence documentation page for HDP cluster',
-    long_description=long_description,
+    long_description=open('README.txt').read(),
     url='http://github.com/nabeelhdp/hdp-doc-gen',
     packages=find_packages(
         include=['hdp-doc-gen'],
