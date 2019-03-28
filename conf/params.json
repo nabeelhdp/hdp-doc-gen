@@ -1,0 +1,71 @@
+{
+  "HDFS": {
+    "core-site": {
+      "fs.defaultFS": "Namenode URL"
+    },
+    "hadoop-env": {
+      "namenode_heapsize": "Namenode Heapsize"
+    },
+    "hdfs-site": {
+      "dfs.blocksize": "HDFS Blocksize",
+      "dfs.datanode.data.dir": "Datanode HDFS Data Dir",
+      "dfs.journalnode.edits.dir": "JournalNode Edits Dir",
+      "dfs.namenode.name.dir": "Namenode HDFS Data Dir",
+      "dfs.replication": "HDFS Replication factor",
+      "dfs.namenode.handler.count": "Namenode Handler count"
+    }
+  },
+  "HIVE": {
+    "hive-interactive-site": {
+      "hive.execution.mode": "Hive Execution mode",
+      "hive.llap.daemon.num.executors": "Hive LLAP Executor count",
+      "hive.llap.daemon.queue.name": "Hive LLAP Daemon Queue",
+      "hive.llap.execution.mode": "Hive LLAP Execution mode",
+      "hive.server2.enable.doAs": "Hive Impersonation Enabled",
+      "hive.server2.tez.initialize.default.sessions": "Tez pre-create sessions"
+    },
+    "hive-site": {
+      "hive.heapsize": "Hive Heapsize",
+      "hive.server2.zookeeper.namespace": "Hive ZK namespace",
+      "hive.zookeeper.quorum": "Hive ZK quorum"
+    },
+    "hive-env": {
+      "hive.metastore.heapsize": "Hive metastore heapsize",
+      "hive_database_name": "Hive DB name",
+      "hive_database_type": "Hive DB type",
+      "hive_security_authorization": "Hive Security Authorization"
+    }
+  },
+  "MAPREDUCE2": {
+    "mapred-site": {
+      "mapred.local.dir": "MapReduce local directory",
+      "mapreduce.jobhistory.address": "MapReduce jobhistory server",
+      "mapreduce.map.memory.mb": "MapReduce Map memory",
+      "mapreduce.reduce.memory.mb": "MapReduce Reduce memory",
+      "yarn.app.mapreduce.am.resource.mb": "MapReduce AM memory",
+      "mapreduce.task.io.sort.mb": "MapReduce io.sort.mb"
+    }
+  },
+  "YARN": {
+    "yarn-env": {
+      "nodemanager_heapsize": "YARN NodeManager Heap",
+      "resourcemanager_heapsize": "YARN ResourceManager Heap",
+      "yarn_cgroups_enabled": "YARN CGroups enabled",
+      "apptimelineserver_heapsize": "YARN ATS Heap size"
+    },
+    "yarn-site": {
+      "yarn.log-aggregation-enable": "YARN Log Aggregation enabled",
+      "yarn.log.server.url": "YARN Log Server URL",
+      "yarn.log.server.web-service.url": "YARN Log Server Web Service URL",
+      "yarn.nodemanager.local-dirs": "YARN Nodemanager Local Dir",
+      "yarn.nodemanager.log-dirs": "YARN Nodemanager Log Dir",
+      "yarn.nodemanager.log.retain-seconds": "YARN Nodemanager log retention seconds",
+      "yarn.nodemanager.resource.memory-mb": "YARN NM allocated memory",
+      "yarn.nodemanager.resource.cpu-vcores": "YARN NM allocated vcpu",
+      "yarn.resourcemanager.address": "YARN RM address",
+      "yarn.resourcemanager.ha.enabled": "YARN RM HA enabled",
+      "yarn.resourcemanager.zk-address": "YARN RM ZK address",
+      "yarn.resourcemanager.zk-state-store.parent-path": "YARN RM state-store ZK path"
+    }
+  }
+}

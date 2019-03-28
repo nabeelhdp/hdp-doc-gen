@@ -1,19 +1,16 @@
-
-import json
-import string
-import sys
-import os
 import re
-from configparser import SafeConfigParser
-from connectionchecks import is_valid_hostname
+import sys
+from configparser import ConfigParser
+
+import connectionchecks
 
 
 def get_config_params(config_file):
   try:
     with open(config_file) as f:
       try:
-        parser = SafeConfigParser()
-        parser.readfp(f)
+        parser = ConfigParser()
+        parser.read_file(f)
       except (ConfigParser.Error) as  err:
         print('Could not parse: {} '.format(err))
         return False
@@ -31,7 +28,7 @@ def get_config_params(config_file):
   if not ambari_server_port.isdigit():
     print("Invalid port specified for Ambari Server. Exiting")
     sys.exit(1)
-  if not is_valid_hostname(ambari_server_host):
+  if not connectionchecks.is_valid_hostname(ambari_server_host):
     print("Invalid hostname provided for Ambari Server. Exiting")
     sys.exit(1)
   if not ambari_server_timeout.isdigit():

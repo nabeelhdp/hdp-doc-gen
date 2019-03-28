@@ -1,14 +1,14 @@
-# !/usr/bin/python3
+#!/usr/bin/python3
 
-import os
-import re
 import base64
 import json
+import os
 import urllib.request
-from readconfig import get_config_params
+
+from configmapping import get_component_config, filter_parameters
 from connectionchecks import test_socket
-from getmykeys import get_each_key, get_all_keys
-import configmapping
+from readconfig import get_config_params
+
 
 # Print response from the Ambari server
 def send_ambari_request(url_suffix=""):
@@ -51,46 +51,48 @@ def send_ambari_request(url_suffix=""):
         print('Requested URL not found. Error:{}'.format(e))
 
 
-def print_config_settings():
-    # config_url = "/configurations/service_config_versions?service_name=/"
-    # url = "{}{}{}&is_current=true".format(base_url, config_url, url_suffix)
-    fullconfig = send_ambari_request()
-    fullkeylist = get_all_keys(fullconfig)
+def print_config_settings(component_config, params_set):
+
     print('<h5><span style=\"color: rgb(0,112,224);\">{}</span></h5>'.format(
         'Configuration parameters')
     )
-    add_kv_table(
-        "Cluster Configuration", 'Parameter', 'Value')
-    add_config_items(fullconfig)
-    print("</tr></tbody></table>")
 
-    pass
+    for component_name, component_value in component_config.items():
+        print('<h4><span style=\"color: rgb(0,112,224);\">{}</span></h4>'.format(component_name))
+        add_config_items(component_name, component_value, params_set[component_name])
+        print("</tbody></table>")
 
 
-def add_config_items(config):
+def add_config_items(component_name, component_config, component_params):
+    print('<table class=\"relative-table wrapped\" style=\"width: 99.9%;\">'
+          '<colgroup>'
+          '<col style=\"width: 30%;\"/>'
+          '<col style=\"width: 40%;\"/>'
+          '<col style=\"width: 10%;\"/>'
+          '<col style=\"width: 20%;\"/>'
+          '</colgroup>'
+          '<tbody>'
+          '<tr>'
+          '<th align="left">Key</th>'
+          '<th align="left">Value</th>'
+          '<th align="left">Tag</th>'
+          '<th align="left">Description</th>'
+          '</tr>'
+          )
 
-    configitemslist = [
-        configmapping.get_cluster_mapping(config),
-        configmapping.get_hdfs_mapping(config),
-        configmapping.get_yarn_mapping(config),
-        configmapping.get_kafka_mapping(config),
-        configmapping.get_zk_mapping(config),
-        configmapping.get_hive_mapping(config)
-    ]
-    for configitems in configitemslist:
-        for k, v in configitems.items():
-            if k == 'CategoryName':
-                print('<tr>')
-                print("<td colspan=\"0\"><b>{}</b></td>".format(v))
-                print('</tr>')
-                continue
+    for tag_name, tag_value in component_config.items():
+
+        for k, v in tag_value.items():
             print('<tr>')
             print("<td colspan=\"1\">{}</td>".format(k))
             print("<td colspan=\"1\">{}</td>".format(v))
+            print("<td colspan=\"1\">{}</td>".format(tag_name))
+            print("<td colspan=\"1\">{}</td>".format(component_params[tag_name][k]))
             print('</tr>')
 
 
 def print_service_components(service_list):
+
     print('<h5><span style=\"color: rgb(0,112,224);\">{}</span></h5>'.format(
         'Component Host nodes')
     )
@@ -132,20 +134,26 @@ def add_kv_table(title, keycol, valcol):
           '<tbody><tr><th align="left">{}</th><th align="left">{}</th></tr>'.format(keycol, valcol)
           )
 
-
 def main():
-    print_config_settings()
-    amb_service_response = send_ambari_request(url_suffix="/services/")
-    print_service_components(amb_service_response)
+    print("<html><body>")
+    service_list = send_ambari_request(url_suffix="/services/")
+    print_service_components(service_list)
 
+    full_config = send_ambari_request()
+    component_config_ = get_component_config(full_config)
+
+    paramfile = "../conf/params.json"
+    params_set = {}
+    with open(paramfile) as f:
+        params_set = json.load(f)
+
+    component_config = filter_parameters(
+        component_config_,
+        params_set
+    )
+
+    print_config_settings(component_config, params_set)
+    print("</body></html>")
 
 if __name__ == "__main__":
     main()
-
-    # if component_name == 'HBASE_MASTER':
-    #    print("\tZookeeperQuorum : {}".format(component_response['metrics']['hbase']['master']['ZookeeperQuorum']))
-    # if component_name == 'HIVE_SERVER':
-    #    hs2_config_response = send_ambari_request("HIVE","configuration")
-    #    for config_types in hs2_config_response['items'][1]['configurations']:
-    #        if config_types['type'] == 'hive-site':
-    #            print("\tJDBC URL : {}".format(config_types['properties']['javax.jdo.option.ConnectionURL']))
