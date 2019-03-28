@@ -73,10 +73,10 @@ def add_config_items(component_name, component_config, component_params):
           '</colgroup>'
           '<tbody>'
           '<tr>'
-          '<th align="left">Key</th>'
+          '<th align="left">Description</th>'
           '<th align="left">Value</th>'
           '<th align="left">Tag</th>'
-          '<th align="left">Description</th>'
+          '<th align="left">key</th>'
           '</tr>'
           )
 
@@ -84,10 +84,10 @@ def add_config_items(component_name, component_config, component_params):
 
         for k, v in tag_value.items():
             print('<tr>')
-            print("<td colspan=\"1\">{}</td>".format(k))
+            print("<td colspan=\"1\">{}</td>".format(component_params[tag_name][k]))
             print("<td colspan=\"1\">{}</td>".format(v))
             print("<td colspan=\"1\">{}</td>".format(tag_name))
-            print("<td colspan=\"1\">{}</td>".format(component_params[tag_name][k]))
+            print("<td colspan=\"1\">{}</td>".format(k))
             print('</tr>')
 
 
