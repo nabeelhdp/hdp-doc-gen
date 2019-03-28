@@ -4,7 +4,6 @@ Cluster documentation is generally an area that's not always given much attentio
 <dl>
   <dt>Eg</dt>
   <dd><i>What's our HDFS blocksize?</i></dd>
-<dd><i>What's our HDFS blocksize?</i></dd>
 <dd><i>Is LLAP enabled in this cluster ?</i></dd>
 <dd><i>What's the default replication for Kafka ?</i></dd>
 </dl>
