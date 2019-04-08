@@ -21,7 +21,7 @@ def get_component_config(master_config):
 
     component_config = {}
 
-    for items in master_config['service_config_versions']:
+    for items in master_config['items']:
         href = items['href'].split("/")[-1]
         component_name = re.search("service_config_versions\?service_name=(.+?)&.*", href).group(1)
         if component_name != None:

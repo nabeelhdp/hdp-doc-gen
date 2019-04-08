@@ -139,7 +139,7 @@ def main():
     service_list = send_ambari_request(url_suffix="/services/")
     print_service_components(service_list)
 
-    full_config = send_ambari_request()
+    full_config = send_ambari_request(url_suffix="/configurations/service_config_versions?is_current=true")
     component_config_ = get_component_config(full_config)
 
     paramfile = "../conf/params.json"
