@@ -141,8 +141,7 @@ def main():
 
     full_config = send_ambari_request(url_suffix="/configurations/service_config_versions?is_current=true")
     component_config_ = get_component_config(full_config)
-
-    paramfile = "../conf/params.json"
+    paramfile = os.path.join(os.path.dirname(__file__), "../conf/params.json")
     params_set = {}
     with open(paramfile) as f:
         params_set = json.load(f)
