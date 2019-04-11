@@ -12,7 +12,8 @@
       "dfs.journalnode.edits.dir": "JournalNode Edits Dir",
       "dfs.namenode.name.dir": "Namenode HDFS Data Dir",
       "dfs.replication": "HDFS Replication factor",
-      "dfs.namenode.handler.count": "Namenode Handler count"
+      "dfs.namenode.handler.count": "Namenode Handler count",
+      "dfs.datanode.failed.volumes.tolerated": "DataNode failed disk tolerance"
     }
   },
   "HIVE": {
@@ -34,6 +35,32 @@
       "hive_database_name": "Hive DB name",
       "hive_database_type": "Hive DB type",
       "hive_security_authorization": "Hive Security Authorization"
+    }
+  },
+  "KAFKA": {
+    "kafka-broker": {
+      "auto.create.topics.enable": "Auto-create topics enabled",
+      "auto.leader.rebalance.enable": "Auto leader rebalance enabled",
+      "compression.type": "Compression type",
+      "default.replication.factor": "Default replication factor",
+      "delete.topic.enable": "Delete topic enabled",
+      "log.dirs": "Kafka Log(data) directories",
+      "message.max.bytes": "Max message size",
+      "min.insync.replicas": "Min insync replicas",
+      "num.io.threads": "I/O thread count",
+      "num.network.threads": "Network thread count",
+      "num.partitions": "Default number of partitions",
+      "port": "Broker listening port",
+      "queued.max.requests": "Max queued request count",
+      "sasl.enabled.mechanisms": "SASL Mechanism enabled",
+      "ssl.client.auth": "SSL Client authentication method",
+      "zookeeper.connect": "ZK connect URL",
+      "zookeeper.connection.timeout.ms": "ZK connection timeout(ms)",
+      "zookeeper.session.timeout.ms": "ZK session timeout(ms) "
+    },
+    "kafka-env": {
+      "is_supported_kafka_ranger": "Ranger-Kafka support",
+      "kafka_log_dir": "Kafka daemon log directory"
     }
   },
   "MAPREDUCE2": {
@@ -66,6 +93,17 @@
       "yarn.resourcemanager.ha.enabled": "YARN RM HA enabled",
       "yarn.resourcemanager.zk-address": "YARN RM ZK address",
       "yarn.resourcemanager.zk-state-store.parent-path": "YARN RM state-store ZK path"
+    }
+  },
+  "ZOOKEEPER": {
+    "zoo.cfg": {
+      "autopurge.purgeInterval": "Snapshot purge interval",
+      "autopurge.snapRetainCount": "Snapshot retain count",
+      "dataDir": "Data directory"
+    },
+    "zookeeper-env": {
+      "zk_log_dir": "Log directory",
+      "zk_server_heapsize": "Zookeeper Heap size"
     }
   }
 }
