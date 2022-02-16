@@ -33,15 +33,17 @@ def get_component_config(master_config):
                     component_config[component_name][tag_name][k] = v
     return component_config
 
-
 def filter_parameters(component_config_full, params_set):
     component_config = {}
     for component_name, component_value in params_set.items():
         component_config[component_name] = {}
         for tag_name, tag_value in component_value.items():
             component_config[component_name][tag_name] = {}
-            for key, value in tag_value.items():
-                component_config[component_name][tag_name][key] = component_config_full[component_name][tag_name][key]
+            try:
+                for key, value in tag_value.items():
+                    component_config[component_name][tag_name][key] = component_config_full[component_name][tag_name][key]
+            except KeyError as e:
+                pass 
     return component_config
 
 
